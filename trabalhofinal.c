@@ -5,7 +5,7 @@
 
 void inicio(){
 	printf("################################ Bem Vindo ##############################################\n");
- 	printf("# Neste jogo você poderá escolher as possibilidades de cores nesta ordem de prioridade: #\n");
+ 	printf("# Neste jogo voce podera escolher as possibilidades de cores nesta ordem de prioridade: #\n");
  	printf("# Vermelho                                                                              #\n");
  	printf("# Verde                                                                                 #\n");
  	printf("# Amarelo                                                                               #\n"); 
@@ -15,9 +15,15 @@ void inicio(){
   	printf("#########################################################################################\n");
 
 }
-
+/*
 void opcao_cores(int n, int pc){
-	int jogada[5];
+	char vermelho[] = "vm: Vermelho";
+	char verde[]    = "vd: Verde";
+	char amarelo[]  = "am: Amarelo";
+	char azul[]     = "az: Azul";
+	char magenta[]  = "mg: Magenta";
+	char ciano[]=    "ci: Ciano";
+
 	jogada[0]=
 	jogada[1]=
 	jogada[2]=
@@ -49,23 +55,42 @@ void jogada(n, pc){
  	printf("Parabéns. Você conseguiu adivinhar a senha com %d tentativas\n", m);
 
 }
-
+*/
 int main(int argc, char const *argv[])
 {
 	inicio();
 
 	int n, pc, lim;
 	printf("Entre com o tamanho da senha: (de 4 a 12)\n");
-	scanf("%d" &n,);	
+	scanf("%d", &n);
 
 	printf("Entre com a possibilidade de cores: (de 3 a 6)\n");
 	scanf("%d", &pc);
 
-	printf("Entre com o limite de tentativas de adivinhação: (a partir de 1)\n");
+	printf("Entre com o limite de tentativas de adivinhacao: (a partir de 1)\n");
 	scanf("%d", &lim);
 
-	verifica_cores(n, pc);
-	jogada(n, pc);
+ 	printf(" Entre com uma combinacao de %d elementos dentre as %d cores seguintes:\n", n, pc);
+
+ 	typedef struct ArvoreBB{
+	char cor[20];
+	char nome[20];
+	struct ArvoreBB *esq, *dir;
+	}ArvoreBB;
+
+ 	char vermelho[] = "vm: Vermelho";
+	char verde[]    = "vd: Verde";
+	char amarelo[]  = "am: Amarelo";
+	char azul[]     = "az: Azul";
+	char magenta[]  = "mg: Magenta";
+	char ciano[]    = "ci: Ciano";
+
+ 	for (i==1, i<=pc, i++){
+ 		printf("%s\n", escolhe[i]);
+ 	}
+
+	//verifica_cores(n, pc);
+	//jogada(n, pc);
 
 
 	
