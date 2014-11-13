@@ -47,10 +47,10 @@ int main(int argc, char const *argv[])
 {
 	inicio();
 
-	char *nome_cor[6] = {"vm: Vermelho", "vd: Verde", "am: Amarelo", "az: Azul" ,"mg: Magenta", "ci: Ciano"};
+	char *nome_cor[6] = {" - vm: Vermelho", " - vd: Verde", " - am: Amarelo", " - az: Azul" ," - mg: Magenta", " - ci: Ciano"};
 	int i;
 	int n, pc, lim;
-	//char senha[20];
+	
 
 	printf("Entre com o tamanho da senha: (de 4 a 12)\n");
 	scanf("%d", &n);
@@ -63,24 +63,19 @@ int main(int argc, char const *argv[])
 
 	//fazer verificação de entradas
  	printf("Entre com uma combinacao de %d elementos dentre as %d cores seguintes:\n", n, pc);
- 	for (i = 0; 1 < pc; i++)
-
- 		printf(" %s\n", nome_cor[i]);
+ 	for (i = 0; i < pc; i++){
+		printf(" %s\n", nome_cor[i]);
+	}
 
  	printf("Entre a sua tentativa, separando os elementos por virgula:  \n");
- 	//scanf(" [^\n]%s", senha);
+ 	//aloca a senha
+ 	senha = (char (malloc(2* N-1)+(2*N)))
+ 	scanf(" %[^\n]s", senha);
+ 	//gerar senha
+ 	// ideia receber a senha quebrar a senha usando strtok para separar as virgulas e os espaços e depois concatena usando strcap dentro da combinação que eh pra quando
+ 	//for comparar nao dar problema 
+ 	//strock cdicide a string
 
 
- 
-
- 	//for (i==1, i<=pc, i++){
- 	//	printf("%s\n", escolhe[i]);
- 	//}
-
-	//verifica_cores(n, pc);
-	//jogada(n, pc);
-
-
-	
 	return 0;
 }
