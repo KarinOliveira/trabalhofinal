@@ -1,15 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include ".\cores.h"
+#include <time.h>
 
-#define VERMELHO = "vm: Vermelho"
-#define VERDE    = "vd: Verde"
-#define AMARELO  = "am: Amarelo"
-#define AZUL     = "az: Azul"
-#define MAGENTA  = "mg: Magenta"
-#define CIANO    = "ci: Ciano"
-
-
+// iniciar
 void inicio(){
 	printf("################################ Bem Vindo ##############################################\n");
  	printf("# Neste jogo voce podera escolher as possibilidades de cores nesta ordem de prioridade: #\n");
@@ -22,6 +16,7 @@ void inicio(){
   	printf("#########################################################################################\n");
 
 }
+
 /*
 	//escollha de cores
 
@@ -38,7 +33,7 @@ void inicio(){
 void jogada(n, pc){
 	int tent;
  	printf("Entre a sua tentativa, separando os elementos por vírgula:  \n");
- 	n= malloc(*size())
+ 	n= malloc(*sizeof())
  	//leitura
  	//verificação da entrada
 
@@ -51,15 +46,14 @@ void jogada(n, pc){
 int main(int argc, char const *argv[])
 {
 	inicio();
-	char nome_cor[20];
-	int i;
 
+	char *nome_cor[6] = {"vm: Vermelho", "vd: Verde", "am: Amarelo", "az: Azul" ,"mg: Magenta", "ci: Ciano"};
+	int i;
 	int n, pc, lim;
-	char senha[20];
+	//char senha[20];
+
 	printf("Entre com o tamanho da senha: (de 4 a 12)\n");
 	scanf("%d", &n);
-	//	char senha[] = (char[1]) malloc(sizeof(n));
-	//alloca o tamanho correto da variavel senha
 
 	printf("Entre com a possibilidade de cores: (de 3 a 6)\n");
 	scanf("%d", &pc);
@@ -67,27 +61,17 @@ int main(int argc, char const *argv[])
 	printf("Entre com o limite de tentativas de adivinhacao: (a partir de 1)\n");
 	scanf("%d", &lim);
 
+	//fazer verificação de entradas
  	printf("Entre com uma combinacao de %d elementos dentre as %d cores seguintes:\n", n, pc);
- 	//ideia cria uma estrutura em forma de lista e para cada adição da cor limpa e insere a nova cor na lista
- 	for (i=1;1<=pc;i++)
- 	printf("%s\n", nome_cor);
+ 	for (i = 0; 1 < pc; i++)
+
+ 		printf(" %s\n", nome_cor[i]);
 
  	printf("Entre a sua tentativa, separando os elementos por virgula:  \n");
- 	scanf("%s", senha);
+ 	//scanf(" [^\n]%s", senha);
 
 
- 	typedef struct lista{
-	char cor[20];
-	char nome[20];
-	struct lista *dir;
-	}tipolista;
-
- 	char vermelho[] = "vm: Vermelho";
-	char verde[]    = "vd: Verde";
-	char amarelo[]  = "am: Amarelo";
-	char azul[]     = "az: Azul";
-	char magenta[]  = "mg: Magenta";
-	char ciano[]    = "ci: Ciano";
+ 
 
  	//for (i==1, i<=pc, i++){
  	//	printf("%s\n", escolhe[i]);
