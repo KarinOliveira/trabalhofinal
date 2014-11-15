@@ -6,3 +6,5 @@
 
 void iniciar_jogo();
 void verificar_entrada();
+void jogada();
+void verificar_jogada();
